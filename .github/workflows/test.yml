@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Clon de repo
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -19,15 +19,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Instalando dependencias
         run: npm install
 
-      - name: Run tests
+      - name: Run de pruebas
         run: npm test
-
-      - name: Upload test results (if using Jest)
-        uses: actions/upload-artifact@v4
-        with:
-          name: TestResults
-          path: jest-results.json
-        if: success() || failure() 
