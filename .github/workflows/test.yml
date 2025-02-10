@@ -1,0 +1,33 @@
+name: Run JS Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Upload test results (if using Jest)
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: jest-results.json
+        if: success() || failure() 

@@ -1,0 +1,23 @@
+{
+  "name": "ci.cd-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexndrperz/Ci.CD-Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexndrperz/Ci.CD-Test/issues"
+  },
+  "homepage": "https://github.com/alexndrperz/Ci.CD-Test#readme",
+  "description": "",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
