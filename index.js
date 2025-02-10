@@ -1,5 +1,5 @@
 function HiFunction() {
-    return "Hoela mundo."
+    return "Hola mundo."
 }
 
 
